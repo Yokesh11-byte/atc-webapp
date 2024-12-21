@@ -3,7 +3,7 @@ name: Provision Infrastructure with Terraform
 on:
   push:
     branches:
-      - main
+      - <branch-name>
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
@@ -35,13 +35,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-
-      - name: Save Terraform Outputs
-        id: tf-output
-        run: terraform output -json > tf_outputs.json
-
-      - name: Upload Terraform Outputs as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: tf-outputs
-          path: tf_outputs.json
