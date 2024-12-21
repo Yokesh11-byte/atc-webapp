@@ -20,11 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Download Terraform Outputs
-        uses: actions/download-artifact@v3
-        with:
-          name: tf-outputs
-
       - name: Login to Google Cloud
         uses: google-github-actions/auth@v1
         with:
