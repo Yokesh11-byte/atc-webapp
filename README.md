@@ -89,4 +89,4 @@ After the deployment, you can access Prometheus to monitor the cluster:
 * Access Prometheus: Open your browser and navigate to http://<Prometheus-EXTERNAL-IP>:9090 to view the Prometheus dashboard.
 
 # Continuous Deployment
-The entire deployment process is fully automated through GitHub Actions. The pipeline triggers automatically on pushes to the main branch, ensuring that both the GKE infrastructure and application deployments are consistently deployed and monitored.
+The entire deployment process is fully automated through GitHub Actions. The pipeline triggers automatically on pushes to the branch that we are selecting, ensuring that both the GKE infrastructure and application deployments are consistently deployed and monitored.
